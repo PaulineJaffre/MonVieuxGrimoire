@@ -29,9 +29,11 @@ app.use((req, res, next) => {
   next();
 });
 
+
 //Utilisation de middlewares pour le traitement des données de requête : transformer les données de requête au format JSON en objets JavaScript exploitables.
 app.use(express.json());
 app.use(bodyParser.json());
+
 
 //Utilisation des routes et gestion des fichiers statiques : quelles routes sont gérées par les routes définies dans les fichiers "books.js" et "user.js" & dossier image
 app.use('/api/books', booksRoutes);
@@ -40,3 +42,4 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Exportation de l'application :
 module.exports = app;
+

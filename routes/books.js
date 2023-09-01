@@ -22,3 +22,5 @@ router.post('/:id/rating', auth, booksCtrl.ratingBook); //notation d'un livre pa
 
 //Exportation du routeur :
 module.exports = router;
+
+console.log("chargement route");
